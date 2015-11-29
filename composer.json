@@ -1,0 +1,22 @@
+{
+  "name": "ernestwisniewski/billsafe-php-sdk",
+  "description": "Billsafe SDK and samples for REST API.",
+  "keywords": [
+    "billsafe"
+  ],
+  "authors": [
+    {
+      "name": "Ernest Wisniewski",
+      "email": "ernestwisniewski2@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "ErnestWisniewski\\Billsafe\\": "src/Billsafe/"
+    }
+  },
+  "require": {
+    "php": ">=5.3.0"
+  }
+}
