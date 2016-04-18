@@ -366,3 +366,8 @@ catch (ErnestWisniewski\Billsafe\Exception\BillsafeException $e)
  * function.
  */
 $bs->redirectToPaymentGateway($token);
+
+/**
+ * To not automatically do the redirect you can get the redirect URL and do the redirect yourself.
+ */
+$redirecTUrl = $bs->getRedirectUrlToPaymentGateway($token);
