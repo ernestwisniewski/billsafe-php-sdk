@@ -289,12 +289,23 @@ class Sdk {
     {
         if (!headers_sent())
         {
-            header('Location: ' . $this->_getGatewayUrl() . '?token=' . $token);
+            header('Location: ' . $this->getRedirectUrlToPaymentGateway($token));
             exit;
         } else
         {
             throw new BillsafeException('Redirect to BillSAFE Payment Gateway failed because HTTP headers have already been sent! Make sure to redirect BEFORE any output is sent to the browser!');
         }
+    }
+
+    /**
+     * Gets the Redirect Url to the Billsafe Payment Gateway
+     *
+     * @param string $token
+     * @return string
+     */
+    public function getRedirectUrlToPaymentGateway($token)
+    {
+        return $this->_getGatewayUrl() . '?token=' . $token;
     }
 
     /**
